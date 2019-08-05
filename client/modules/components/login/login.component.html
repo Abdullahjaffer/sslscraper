@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-0">
+
+      </div>
+  <div class="col-lg-4 col-12 p-lg-0 pt-lg-5 p-5">
+    <div class="card rounded shadow-lg">
+      <div class="card-header">
+        <h1>
+          Log In
+        </h1>
+      </div>
+        
+        <div class="card-body">
+          <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">  
+        
+            <div class="form-group ">
+                <label for="Email">Username:</label>
+                <input required maxlength="30" ngModel name="Email" class="form-control" #Email='ngModel' pattern="^[a-zA-Z0-9_.-]*$">
+                <div class="alert alert-danger" *ngIf="Email.touched && !Email.valid">
+                    <div *ngIf="Email.errors.required">Username is required.</div>
+                    <div *ngIf="Email.errors.maxlength">Maximum length is '30' Characters</div>
+                    <div *ngIf="Email.errors.pattern">Invalid Syntax</div>
+                  </div>
+                </div> 
+                <button class="btn btn-primary" [disabled]="!Email.valid">Submit</button>
+      </form>
+        </div>
+      </div>
+  </div>
+  <div class="col-lg-4 col-0">
+
+    </div>
+</div>
+</div>

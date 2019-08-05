@@ -1,0 +1,9 @@
+<tr style="display: block" *ngIf="show">
+  <td style="width: 25vw"><a href="{{item.url}}">{{item.url}}</a></td>
+  <td style="width: 25vw">{{item.title}}</td>
+  <td style="width: 8vw"><input type="checkbox" [(ngModel)]="myVar1" /> </td>
+  <td style="width: 8vw"><input type="checkbox" [(ngModel)]="myVar2" /> </td>
+  <td style="width: 12vw">{{date}}</td>
+  <td style="width: 8vw"><i class="fa fa-check p-1 border border-white rounded m-1 text-success" (click)="save()"></i>
+    <i class="fa fa-times  p-1 border border-white rounded m-1 text-danger" (click)="delete()"></i></td>
+</tr>

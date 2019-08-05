@@ -1,6 +1,5 @@
 var query = require('../../../models/query');
 const mongoose =  require('mongoose')
-var request = require('request');
 const CognitiveServicesCredentials = require('ms-rest-azure').CognitiveServicesCredentials;
 const WebSearchAPIClient = require('azure-cognitiveservices-websearch');
 var ssllabs = require("node-ssllabs");

@@ -12,8 +12,9 @@ export class WelcomeComponent {
     private http: HttpClient
     ) {}
     ngOnInit() {
-      this.http.get('http://api.ipify.org/?format=json').subscribe(
+      this.http.get('https://jsonip.com/').subscribe(
         (ip : any)=>{
+          console.log(ip)
           let token = localStorage.getItem('token')
           let existing = false
           if(token){

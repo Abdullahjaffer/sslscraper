@@ -14,6 +14,7 @@ export class ListComponent implements OnInit{
   myVar1: boolean;
   myVar2: boolean;
   show: boolean;
+  emailShow: boolean
   constructor(
     private router:Router ,
     private http: HttpClient
@@ -24,6 +25,8 @@ export class ListComponent implements OnInit{
     this.myVar1 = this.item.contacted
     this.myVar2 = this.item.responded
     this.show = true
+    this.emailShow = false
+    console.log(this.item.emails)
   }
   save(){
     this.http.post('api/v1/query/save',{
@@ -53,6 +56,17 @@ export class ListComponent implements OnInit{
         }
       )
     }
+  }
+  searchEmail(){
+    this.http.post('api/v1/query/getEmails',{
+      url: this.item.url,
+    }).subscribe(
+      res=>{
+        this.item = res
+      },
+      err=>{
+      }
+    )
   }
   
 }

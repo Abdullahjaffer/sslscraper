@@ -1,9 +1,11 @@
-<tr style="display: block" *ngIf="show">
-  <td style="width: 25vw"><a href="{{item.url}}">{{item.url}}</a></td>
-  <td style="width: 25vw">{{item.title}}</td>
+<tr style="display: block; width: 100%" *ngIf="show">
+  <td style="width: 20vw"><a href="{{item.url}}">{{item.url}}</a></td>
+  <td style="width: 20vw">{{item.title}}</td>
   <td style="width: 8vw"><input type="checkbox" [(ngModel)]="myVar1" /> </td>
   <td style="width: 8vw"><input type="checkbox" [(ngModel)]="myVar2" /> </td>
   <td style="width: 12vw">{{date}}</td>
   <td style="width: 8vw"><i class="fa fa-check p-1 border border-white rounded m-1 text-success" (click)="save()"></i>
     <i class="fa fa-times  p-1 border border-white rounded m-1 text-danger" (click)="delete()"></i></td>
+  <td style="width: 15vw" *ngIf="item.emails.length>0"><button class="btn btn-success">Show</button></td>
+  <td style="width: 15vw" *ngIf="item.emails.length==0"><button class="btn btn-primary" (click)="searchEmail()">Search</button></td>
 </tr>

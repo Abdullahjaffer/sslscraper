@@ -10,7 +10,8 @@ var Querychema = new mongoose.Schema({
   responded: {type: Boolean, default: false},
   template: {type: String},
   search: {type: String},
-  user: {type: String}
+  user: {type: String},
+  emails: [{type: String}]
 }, {timestamps: true});
 
 Querychema.plugin(uniqueValidator, {message: 'is already taken.'});

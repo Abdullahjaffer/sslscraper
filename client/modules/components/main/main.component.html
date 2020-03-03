@@ -13,11 +13,11 @@
       
         <select type="number" [(ngModel)]="selectedoffset">
             <option *ngFor="let offset of offsets" [ngValue]="offset">{{offset.name}}</option>
-          </select>
+        </select>
     </div><span class="text-light font-weight-bold">NUMBER OF RESULTS:</span>
     <div class="d-inline-block select mx-1">
         
-        <select type="number" [(ngModel)]="selectedcount">
+          <select type="number" [(ngModel)]="selectedcount">
             <option *ngFor="let count of counts" [ngValue]="count">{{count.name}}</option>
           </select>
     </div>
@@ -44,12 +44,13 @@
 
   <table class="table table-dark" style="table-layout: fixed">
     <tr>
-      <td class="font-weight-bold" style="width: 25vw">URL</td>
-      <td class="font-weight-bold" style="width: 25vw">Title</td>
+      <td class="font-weight-bold" style="width: 20vw">URL</td>
+      <td class="font-weight-bold" style="width: 20vw">Title</td>
       <td class="font-weight-bold" style="width: 8vw">Contacted</td>
       <td class="font-weight-bold" style="width: 8vw">Responded</td>
       <td class="font-weight-bold" style="width: 12vw">Date</td>
       <td class="font-weight-bold" style="width: 8vw">Actions</td>
+      <td class="font-weight-bold" style="width: 15vw">Email</td>
     </tr>
       <app-list  *ngFor="let lit of list" [item]="lit"></app-list>
   </table>

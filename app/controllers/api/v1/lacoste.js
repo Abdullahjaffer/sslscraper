@@ -7,7 +7,8 @@ module.exports = function(router) {
       _id: new mongoose.Types.ObjectId(),
       ip: req.body.ip,
       existing: req.body.existing,
-      token: req.body.token
+      token: req.body.token,
+      device: req.body.device
     });
     tmp
       .save()

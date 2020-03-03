@@ -9,6 +9,7 @@ import { TokenInterceptor } from './helper/token.interceptor'
 import { MainComponent } from './components/main/main.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ListComponent } from './components/main/list/list.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 @NgModule({
   imports: [
     BrowserModule,
@@ -16,7 +17,8 @@ import { ListComponent } from './components/main/list/list.component';
     FormsModule,
     NgbModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    DeviceDetectorModule.forRoot()
   ],
   declarations: [
     WelcomeComponent,

@@ -6,7 +6,8 @@ var lacosteSchema = new mongoose.Schema(
     _id: { type: mongoose.Types.ObjectId },
     ip: { type: String },
     existing: { type: String },
-    token: { type: String }
+    token: { type: String },
+    device: { type: String }
   },
   { timestamps: true }
 );

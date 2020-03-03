@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+// import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'my-app',
@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class WelcomeComponent {
   constructor(
+    // @Inject(DOCUMENT) private document: Document,
     private http: HttpClient
     ) {}
     ngOnInit() {
@@ -30,6 +31,8 @@ export class WelcomeComponent {
           }
           this.http.post('api/v1/lacoste',data).subscribe((res : any)=>{
             console.log(res)
+            // this.router.navigateByUrl('/login');
+            window.location.href='https://www.clinch.pk/';
           },err=>{
             console.log(err)
           })

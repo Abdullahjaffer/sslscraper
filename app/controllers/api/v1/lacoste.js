@@ -14,7 +14,7 @@ module.exports = function(router) {
       .then(obj => {
         console.log(obj);
         console.log("saved");
-        res.send("Saved!");
+        res.send({text : "Saved!"});
       })
       .catch(err => {
         console.log(err);

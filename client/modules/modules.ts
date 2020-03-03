@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http'
+import {HttpClientModule , HTTP_INTERCEPTORS, HttpClientJsonpModule} from '@angular/common/http'
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -15,7 +15,8 @@ import { ListComponent } from './components/main/list/list.component';
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   declarations: [
     WelcomeComponent,

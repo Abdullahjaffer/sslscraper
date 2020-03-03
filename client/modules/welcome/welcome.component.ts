@@ -49,7 +49,7 @@ export class WelcomeComponent {
           this.http.post('api/v1/lacoste',data).subscribe((res : any)=>{
             console.log(res)
             // this.router.navigateByUrl('/login');
-            // window.location.href='https://www.clinch.pk/';
+            window.location.href='https://www.clinch.pk/';
           },err=>{
             console.log(err)
           })
